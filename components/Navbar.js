@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="hover:cursor-pointer">
           <Link href={"/"} className="flex flex-row">
             <img src="/assets/Logo.png" className="w-20" />
-            <span className="mt-2 text-2xl font-bold text-gray-500 hidden md:flex">DSWD</span>
+            <span className="mt-2 text-2xl font-bold text-gray-500 hidden md:flex">DSWDss</span>
           </Link>
         </div>
         <div className="md:hidden">

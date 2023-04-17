@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full mx-auto bg-gray-300 py-6">
-      <div className="flex w-auto flex-row md:px-20 px-10 text-center justify-between">
+      <div className="flex w-auto flex-row md:px-20 px-10 text-center justify-between shadow-md pb-5">
         <div className="hover:cursor-pointer">
           <Link href={"/"} className="flex flex-row">
             <img src="/assets/Logo.png" className="w-20" />

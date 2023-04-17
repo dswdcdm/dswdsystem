@@ -11,7 +11,7 @@ yarn dev
 # or
 pnpm dev
 ```
-
+design https://www.figma.com/file/c2bj9Yo4ovMp0rM2e67FcU/Dswd_Bidding_Web-app?node-id=0-1&t=AYuC8TyiTJ4XIRIR-0
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.

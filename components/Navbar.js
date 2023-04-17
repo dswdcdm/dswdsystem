@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-BiDetail
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiMenu2Line } from "react-icons/ri";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BiHomeAlt ,BiDetail} from "react-icons/bi";
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,9 +17,11 @@ const Navbar = () => {
         <div className="hover:cursor-pointer">
           <Link href={"/"} className="flex flex-row">
             <img src="/assets/Logo.png" className="w-20" />
-            <span className="mt-2 text-2xl font-bold text-gray-500 hidden md:flex">DSWD</span>
+            <motion.span initial={{opacity: 0}} animate={{opacity:1}} transition={{delay:0.2}} className="mt-2 text-2xl font-bold text-gray-500 hidden md:flex">DSWD <span className="mx-2 hidden lg:flex text-red-700">BGMD</span> </motion.span>
           </Link>
         </div>
+
+        
         <div className="md:hidden">
           {showMenu ? (
             <RiMenu2Line
@@ -36,15 +38,15 @@ const Navbar = () => {
 
         <div className=" text-center mt-2  md:flex hidden">
           <ul className="flex flex-row gap-7">
-            <li className="hover:bg-gray-400 rounded-md p-2  hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
+            <motion.li initial={{y:-1, opacity: 0}} animate={{y:1,opacity:1}} transition={{duration:0.1, delay:0.1}} className="hover:bg-gray-400 rounded-md p-2  hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
               <Link href={"/"} className="flex flex-row gap-2"> <BiHomeAlt className=" text-xl"/>HOME</Link>
-            </li>
-            <li className="hover:bg-gray-400 rounded-md p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
+            </motion.li>
+            <motion.li initial={{y:-1, opacity: 0}} animate={{y:1,opacity:1}} transition={{duration:0.1, delay:0.2}} className="hover:bg-gray-400 rounded-md p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
               <Link href={"/"} className="flex flex-row gap-2"><BiDetail className=" text-xl"/>BIDDING</Link>
-            </li>
-            <li className="hover:bg-gray-400 rounded-md p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
+            </motion.li>
+            <motion.li initial={{y:-1, opacity: 0}} animate={{y:1,opacity:1}} transition={{duration:0.1, delay:0.3}} className="hover:bg-gray-400 rounded-md p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
               <Link href={"/"} className="flex flex-row gap-2"><BsFillPersonFill className=" text-xl"/>PROFILE</Link>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </div>

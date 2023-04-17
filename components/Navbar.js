@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
+BiDetail
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiMenu2Line } from "react-icons/ri";
-import { BiHomeAlt } from "react-icons/bi";
+import { BsFillPersonFill } from "react-icons/bs";
+import { BiHomeAlt ,BiDetail} from "react-icons/bi";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -34,15 +35,15 @@ const Navbar = () => {
         </div>
 
         <div className=" text-center mt-2  md:flex hidden">
-          <ul className="flex flex-row">
-            <li className="hover:bg-gray-600 p-2 flex hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
-              <Link href={"/"}>HOME</Link>
+          <ul className="flex flex-row gap-7">
+            <li className="hover:bg-gray-400 rounded-md p-2  hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
+              <Link href={"/"} className="flex flex-row gap-2"> <BiHomeAlt className=" text-xl"/>HOME</Link>
             </li>
-            <li className="hover:bg-gray-600 p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
-              <Link href={"/"}>BIDDING</Link>
+            <li className="hover:bg-gray-400 rounded-md p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
+              <Link href={"/"} className="flex flex-row gap-2"><BiDetail className=" text-xl"/>BIDDING</Link>
             </li>
-            <li className="hover:bg-gray-600 p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
-              <Link href={"/"}>PROFILE</Link>
+            <li className="hover:bg-gray-400 rounded-md p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
+              <Link href={"/"} className="flex flex-row gap-2"><BsFillPersonFill className=" text-xl"/>PROFILE</Link>
             </li>
           </ul>
         </div>
@@ -53,9 +54,7 @@ const Navbar = () => {
           <ul className="space-y-2 p-2">
             <li className="hover:bg-gray-600 p-2  hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
               <Link href={"/"}>
-                {" "}
-                <BiHomeAlt />
-                HOME
+               HOME
               </Link>
             </li>
             <li className="hover:bg-gray-600 p-2 hover:text-white hover:cursor-pointer transition ease-in-out delay-75 duration-300">
